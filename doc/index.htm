@@ -9,6 +9,8 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="css/ekko-lightbox.min.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
 
@@ -46,6 +48,19 @@
     <div class="container">
 
       <div class="starter-template">
+
+        <h1>Lifted Flame dataset</h1>
+        <ul>
+          <li>Format: VTK XML</li>
+          <li>File size: 181 MB</li>
+          <li>#Tetrahedra: 3216447</li>
+          <li>Attributes: x, y, z, mass_density, pressure, temperature, Mach, Y_H2, Y_H, Y_O2, Y_O, Y_OH, Y_H2O, b_pressure, b_temperature, b_Y_H2, b_Y_O2, b_Y_N2, u, v, w, sb_u, sb_v, sb_w</li>
+        </ul>
+        <p>Images(attribute: Y_OH):</p>
+        <div class="liftedflame">
+          <p>No GI / With GI<br><a href="img/liftedflame_oh_1.png" data-toggle="lightbox" data-title="No GI" data-gallery="multiimages" data-parent=".liftedflame"><img src="img/liftedflame_oh_1.png" class="img2"></a><a href="img/liftedflame_oh_1_gi.png" data-toggle="lightbox" data-title="With GI" data-gallery="multiimages" data-parent=".liftedflame"><img src="img/liftedflame_oh_1_gi.png" class="img2"></a></p>
+        </div>
+
         <h1>Bomb Drop dataset</h1>
         <ul>
           <li>Format: VTK XML</li>
@@ -54,8 +69,10 @@
           <li>Attributes: u, v, w, p(presure?)</li>
         </ul>
         <p>Images(attribute: velocity magnitude |(u, v, w)|):</p>
-        <p>No GI<br><img src="img/drop_1.png" class="img1"></p>
-        <p>With GI<br><img src="img/drop_1_gi.png" class="img1"></p>
+        <div class="drop">
+          <p>No GI<br><a href="img/drop_1.png" data-toggle="lightbox" data-title="No GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_1.png" class="img1"></a></p>
+          <p>With GI<br><a href="img/drop_1_gi.png" data-toggle="lightbox" data-title="With GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_1_gi.png" class="img1"></a></p>
+        </div>
 
         <h1>Light volume guided sampling for ray casting</h1>
         <ul>
@@ -90,5 +107,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/ekko-lightbox.min.js"></script>
+    <script type="text/javascript">
+      $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+      });
+    </script>
   </body>
 </html>
