@@ -49,7 +49,7 @@
 
       <div class="starter-template">
 
-        <h1>Lifted Flame dataset</h1>
+        <h1 class="page-header">Lifted Flame dataset</h1>
         <ul>
           <li>Format: VTK XML</li>
           <li>File size: 181 MB</li>
@@ -64,40 +64,52 @@
           <a href="img/liftedflame_oh_1.png" data-toggle="lightbox" data-title="Y_OH (no GI)" data-gallery="multiimages" data-parent=".liftedflame"><img src="img/liftedflame_oh_1.png" class="img2"></a><a href="img/liftedflame_oh_1_gi.png" data-toggle="lightbox" data-title="Y_OH (with GI)" data-gallery="multiimages" data-parent=".liftedflame"><img src="img/liftedflame_oh_1_gi.png" class="img2"></a></p>
         </div>
 
-        <h1>Bomb Drop dataset</h1>
+        <h1 class="page-header">Bomb Drop dataset</h1>
         <ul>
           <li>Format: VTK XML</li>
           <li>File size: 71 MB</li>
           <li>#Tetrahedra: 935410</li>
-          <li>Attributes: u, v, w, p(presure?)</li>
+          <li>Attributes: u, v, w, p(pressure?)</li>
         </ul>
-        <p>Images(attribute: velocity magnitude |(u, v, w)|):</p>
         <div class="drop">
-          <p>No GI<br><a href="img/drop_1.png" data-toggle="lightbox" data-title="No GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_1.png" class="img1"></a></p>
-          <p>With GI<br><a href="img/drop_1_gi.png" data-toggle="lightbox" data-title="With GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_1_gi.png" class="img1"></a></p>
+          <p>Attribute: velocity magnitude |(u, v, w)|<br>
+          No GI / with GI<br><a href="img/drop_1.png" data-toggle="lightbox" data-title="No GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_1.png" class="img3"></a>
+          <a href="img/drop_1_gi.png" data-toggle="lightbox" data-title="With GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_1_gi.png" class="img3"></a></p>
+          <p>Attribute: vorticity magnitude<br>
+          No GI / with GI<br><a href="img/drop_vort_1.png" data-toggle="lightbox" data-title="No GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_vort_1.png" class="img3"></a>
+          <a href="img/drop_vort_1_gi.png" data-toggle="lightbox" data-title="With GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_vort_1_gi.png" class="img3"></a><br>
+          Slice<br>
+          <a href="img/drop_vort_1_slice.png" data-toggle="lightbox" data-title="With GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_vort_1_slice.png" class="img3"></a>
+          </p>
+          <p>Attribute: p(pressure?)<br>
+          No GI (connot tell whether the bulge goes forward or backward) / with GI (clearly it goes backword)<br><a href="img/drop_p_1.png" data-toggle="lightbox" data-title="No GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_p_1.png" class="img3"></a>
+          <a href="img/drop_p_1_gi.png" data-toggle="lightbox" data-title="With GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_p_1_gi.png" class="img3"></a><br>
+          Another camera angle: No GI / with GI<br><a href="img/drop_p_2.png" data-toggle="lightbox" data-title="No GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_p_2.png" class="img3"></a>
+          <a href="img/drop_p_2_gi.png" data-toggle="lightbox" data-title="With GI" data-gallery="multiimages" data-parent=".drop"><img src="img/drop_p_2_gi.png" class="img3"></a>
+          </p>
         </div>
 
-        <h1>Light volume guided sampling for ray casting</h1>
+        <h1 class="page-header">Light volume guided sampling for ray casting</h1>
         <ul>
           <li>To speed up ray casting by omitting occluded regions or to place more samples at critical (bright?) regions.</li>
           <li>TBD.</li>
         </ul>
 
-        <h1>Backward light tracking</h1>
+        <h1 class="page-header">Backward light tracking</h1>
         <ul>
           <li>Purpose: to capture high frequency shadows caused by local occlussion</li>
           <li>Currently no obvious difference found. Need to find better examples.</li>
         </ul>
         
-        <h1>Absorption formula</h1>
+        <h1 class="page-header">Absorption formula</h1>
         <p>Subtle differences. Pre-integration should help with capturing effects of thin layers.</p>
         <ol>
-          <li>L' = L * exp(-\sigma_a * alpha * distance)<br>old formula<br><img src="img/absorb_1.png" class="img1"></li>
-          <li>L' = L * (1 - (1 - (1-alpha)^(\sigma_a * distance)))<br>using adjusted alpha value<br><img src="img/absorb_2.png" class="img1"></li>
-          <li>L' = L * (1-alpha_preintetrated)^\sigma_a<br>using pre-integrated alpha value<br><img src="img/absorb_3.png" class="img1"></li>
+          <li>L' = L * exp(-\sigma_a * alpha * distance)<br>old formula<br><img src="img/absorb_1.png" class="img3"></li>
+          <li>L' = L * (1 - (1 - (1-alpha)^(\sigma_a * distance)))<br>using adjusted alpha value<br><img src="img/absorb_2.png" class="img3"></li>
+          <li>L' = L * (1-alpha_preintetrated)^\sigma_a<br>using pre-integrated alpha value<br><img src="img/absorb_3.png" class="img3"></li>
         </ol>
         
-        <h1>Further work</h1>
+        <h1 class="page-header">Further work</h1>
         <ul>
           <li>Anisotropic scattering</li>
         </ul>
