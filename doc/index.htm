@@ -49,6 +49,20 @@
 
       <div class="starter-template">
 
+        <h1 id="high_freq_shadows" class="page-header">High frequency shadows</h1>
+        <h2 id="backward_light_track">Backward light tracking</h1>
+        <ul>
+          <li>Purpose: to capture high frequency shadows caused by local occlussion</li>
+          <li>Currently no obvious difference found. Need to find better examples.</li>
+        </ul>
+        <h2>Observation</h2>
+        <p>Comparison between different scattering coefficient: left: 0.05, right: 0.25</p>
+        <div class="row high_freq_shadow">
+          <div class="col-md-5"><a href="img/high_freq_shadow_s=0.05.png" data-toggle="lightbox" data-title="sigma_s = 0.05" data-gallery="multiimages" data-parent=".high_freq_shadow"><img src="img/high_freq_shadow_s=0.05.png" class="img-thumbnail"></a></div>
+          <div class="col-md-5"><a href="img/high_freq_shadow_s=0.25.png" data-toggle="lightbox" data-title="sigma_s = 0.25" data-gallery="multiimages" data-parent=".high_freq_shadow"><img src="img/high_freq_shadow_s=0.25.png" class="img-thumbnail"></a></div>
+        </div>
+        <p>Shadow on the droplet can be clearly seen in the left image. So one of the reason that high frequency shadows are missing might be the scattering. However, the problem is that most of droplets are very small (&lt;10 cells), so if we want to keep the very high frequency shadows, the scattering power might not enough to eliminate the unwanted black dots.</p>
+
         <h1 class="page-header">Lifted Flame dataset</h1>
         <ul>
           <li>Format: VTK XML</li>
@@ -119,12 +133,6 @@
         <ul>
           <li>To speed up ray casting by omitting occluded regions or to place more samples at critical (bright?) regions.</li>
           <li>TBD.</li>
-        </ul>
-
-        <h1 class="page-header">Backward light tracking</h1>
-        <ul>
-          <li>Purpose: to capture high frequency shadows caused by local occlussion</li>
-          <li>Currently no obvious difference found. Need to find better examples.</li>
         </ul>
         
         <h1 class="page-header">Absorption formula</h1>
