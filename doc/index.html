@@ -37,7 +37,7 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="gallery.htm">Gallery</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -48,6 +48,30 @@
     <div class="container">
 
       <div class="starter-template">
+
+        <h1 class="page-header">Projected Tetrahedra</h1>
+        <ul>
+          <li>A. Maximo et al.: Hardware-Assisted Projected Tetrahedra</li>
+          <li>R. Marroquim et al.: Volume and Isosurface Rendering with GPU-Accelerated Cell Projection</li>
+          <li>B. Wylie et al.: Tetrahedral Projection using Vertex Shaders</li>
+        </ul>
+        <p>Performance test (1024x768) (FPS):</p>
+        <table class="table table-striped">
+          <thead>
+            <tr><th>Dataset</th><th>#Tetrahedra</th><th>Ray Casting</th><th>Projected Tetrahedra</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>parikh (wing w/ attachment)</td><td>567 K</td><td>3.1</td><td>31.9</td></tr>
+            <tr><td>lwt (airplane)</td><td>4.6 M</td><td>1.3</td><td>4.2</td></tr>
+            <tr><td>ICE (train)</td><td>6.1 M</td><td>4.2</td><td>3.3</td></tr>
+            <tr><td>BMW (car)</td><td>24.7 M</td><td>3.2</td><td>0.17</td></tr>
+            <tr><td>engine</td><td>6.0 M</td><td>1.3</td><td>3.5</td></tr>
+            <tr><td>Drop (bomb)</td><td>165 K</td><td>2.7</td><td>19.6</td></tr>
+            <tr><td>LiftedFlame</td><td>3.2 M</td><td>3.1</td><td>8.2</td></tr>
+          </tbody>
+        </table>
+        <p>Performance of ray casting hardly depends on the image size and view angle. PT depends on the number of cells.</p>
+
 
         <h1 id="high_freq_shadows" class="page-header">High frequency shadows</h1>
         <h2 id="backward_light_track">Backward light tracking</h1>
