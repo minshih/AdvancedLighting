@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Gallery</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +52,25 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1>Video</h1>
+
+        <h1 class="page-header">Datasets</h1>
+        <table class="table table-striped">
+          <thead>
+            <tr><th>Dataset</th><th>#Vertices</th><th>#Tetrahedra</th><th>#Pyramids</th><th>#Prisms</th><th>#Tetra(divided)</th><th>File Size</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>parikh (wing w/ attachment)</td><td>103064</td><td>567862</td><td>0</td><td>0</td><td>567862</td><td>12.2 MB</td></tr>
+            <tr><td>lwt (airplane)</td><td>804056</td><td>4607888</td><td>0</td><td>0</td><td>4607888</td><td>96.7 MB</td></tr>
+            <tr><td>ICE (train)</td><td>1068701</td><td>931230</td><td>14737</td><td>1738863</td><td>6177293</td><td>170 MB</td></tr>
+            <tr><td>BMW (car)</td><td>4291741</td><td>7785548</td><td>130263</td><td>5554541</td><td>24709697</td><td>585 MB</td></tr>
+            <tr><td>engine</td><td>1240242</td><td>6072445</td><td>0</td><td>0</td><td>6072445</td><td>134 MB (single step)</td></tr>
+            <tr><td>Drop (bomb)</td><td>165985</td><td>935410</td><td>0</td><td>0</td><td>935410</td><td>71.1 MB</td></tr>
+            <tr><td>LiftedFlame</td><td>538432</td><td>3216447</td><td>0</td><td>0</td><td>3216447</td><td>181 MB</td></tr>
+          </tbody>
+        </table>
+
+
+        <h1 class="page-header">Video</h1>
         <video id="video_1" class="video-js vjs-default-skin"
           controls preload="auto" width="800" height="600"
           poster="video/engine_gi_3L.jpg"
