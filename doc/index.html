@@ -49,6 +49,29 @@
 
       <div class="starter-template">
 
+        <h1 class="page-header">Comparison to ray tracing</h1>
+        <p>Local lighting (left), our method (middle), ray tracing (1 shadow ray) (right). Illumination is performed with a single directional light source.</p>
+        <div class="row comp_rt">
+          <div class="col-md-4"><a href="img/liftedflame_oh_1_local.png" data-toggle="lightbox" data-title="Local lighting" data-gallery="multiimages" data-parent=".comp_rt"><img src="img/liftedflame_oh_1_local.png" class="img-thumbnail"/></a></div>
+          <div class="col-md-4"><a href="img/liftedflame_oh_1_grid_based.png" data-toggle="lightbox" data-title="Our method" data-gallery="multiimages" data-parent=".comp_rt"><img src="img/liftedflame_oh_1_grid_based.png" class="img-thumbnail"/></a></div>
+          <div class="col-md-4"><a href="img/liftedflame_oh_1_shadow_ray.png" data-toggle="lightbox" data-title="Ray tracing (1 shadow ray)" data-gallery="multiimages" data-parent=".comp_rt"><img src="img/liftedflame_oh_1_shadow_ray.png" class="img-thumbnail"/></a></div>
+        </div>
+        <br/>
+        <p>Performance numbers:</p>
+        <table class="table table-striped">
+          <thead>
+            <tr><th>Method</th><th>Rendering</th><th>Light Volume Construction</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Local lighting</td><td>328 ms</td><td>N/A</td></tr>
+            <tr><td>Our method</td><td>328 ms</td><td>831 ms</td></tr>
+            <tr><td>Ray tracing</td><td>34658 ms</td><td>N/A</td></tr>
+          </tbody>
+        </table>
+        <p>Apparently RT image is sharper. Since we shoot one shadow ray for each sample point, the produced shadows are hard shadows. However, our method keeps most of shade features while the computation time is far less than RT.</p>
+        <p><b>Ray tracing implementation</b>  For each step, a shadow ray pointing the light source is shot. the shadow ray samples cell borders and uses pre-integrated TF to evaluate the accumulated alpha value. Scattering effects are not evaluated.</p>
+
+
         <h1 class="page-header">Projected Tetrahedra</h1>
         <ul>
           <li>A. Maximo et al.: Hardware-Assisted Projected Tetrahedra</li>
