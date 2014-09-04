@@ -9,6 +9,9 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- LightBox -->
+    <link href="css/ekko-lightbox.min.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
 
@@ -69,8 +72,38 @@
           </tbody>
         </table>
 
+        <h1 class="page-header">parikh</h1>
+        <p>velocity magnitude (no GI / GI)</p>
+        <div class="row parikh_vel">
+          <div class="col-md-6"><a href="img/parikh_vel_1.png" data-toggle="lightbox" data-title="velocity" data-gallery="multiimages" data-parent=".parikh_vel"><img src="img/parikh_vel_1.png" class="img-thumbnail"></a></div>
+          <div class="col-md-6"><a href="img/parikh_vel_1_gi.png" data-toggle="lightbox" data-title="velocity(GI)" data-gallery="multiimages" data-parent=".parikh_vel"><img src="img/parikh_vel_1_gi.png" class="img-thumbnail"></a></div>
+          <div class="col-md-6"><a href="img/parikh_vel_2.png" data-toggle="lightbox" data-title="velocity" data-gallery="multiimages" data-parent=".parikh_vel"><img src="img/parikh_vel_2.png" class="img-thumbnail"></a></div>
+          <div class="col-md-6"><a href="img/parikh_vel_2_gi.png" data-toggle="lightbox" data-title="velocity(GI)" data-gallery="multiimages" data-parent=".parikh_vel"><img src="img/parikh_vel_2_gi.png" class="img-thumbnail"></a></div>
+          <div class="col-md-6"><a href="img/parikh_vel_3.png" data-toggle="lightbox" data-title="velocity" data-gallery="multiimages" data-parent=".parikh_vel"><img src="img/parikh_vel_3.png" class="img-thumbnail"></a></div>
+          <div class="col-md-6"><a href="img/parikh_vel_3_gi.png" data-toggle="lightbox" data-title="velocity(GI)" data-gallery="multiimages" data-parent=".parikh_vel"><img src="img/parikh_vel_3_gi.png" class="img-thumbnail"></a></div>
+        </div>
 
-        <h1 class="page-header">Video</h1>
+        <h1 class="page-header">ICE</h1>
+        <p>velocity magnitude (no GI / GI)</p>
+        <div class="row ice_vel">
+          <div class="col-md-6"><a href="img/ice_vel_1.png" data-toggle="lightbox" data-title="velocity" data-gallery="multiimages" data-parent=".ice_vel"><img src="img/ice_vel_1.png" class="img-thumbnail"></a></div>
+          <div class="col-md-6"><a href="img/ice_vel_1_gi.png" data-toggle="lightbox" data-title="velocity(GI)" data-gallery="multiimages" data-parent=".ice_vel"><img src="img/ice_vel_1_gi.png" class="img-thumbnail"></a></div>
+        </div>
+
+        <h1 class="page-header">LiftedFlame</h1>
+        <p>Y_OH (no GI / GI(sigma_a=1) / GI(sigma_a=2)) (sigma_a: absorption coefficient)</p>
+        <div class="row liftedflame_oh">
+          <div class="col-md-4"><a href="img/liftedflame_oh_2.png" data-toggle="lightbox" data-title="Y_OH" data-gallery="multiimages" data-parent=".liftedflame_oh"><img src="img/liftedflame_oh_2.png" class="img-thumbnail"></a></div>
+          <div class="col-md-4"><a href="img/liftedflame_oh_2_gi_sigma_a=1.png" data-toggle="lightbox" data-title="Y_OH(GI, sigma_a=1)" data-gallery="multiimages" data-parent=".liftedflame_oh"><img src="img/liftedflame_oh_2_gi_sigma_a=1.png" class="img-thumbnail"></a></div>
+          <div class="col-md-4"><a href="img/liftedflame_oh_2_gi_sigma_a=2.png" data-toggle="lightbox" data-title="Y_OH(GI, sigma_a=2)" data-gallery="multiimages" data-parent=".liftedflame_oh"><img src="img/liftedflame_oh_2_gi_sigma_a=2.png" class="img-thumbnail"></a></div>
+        </div>
+        <p>temperature (no GI / GI)</p>
+        <div class="row liftedflame_temp">
+          <div class="col-md-5"><a href="img/liftedflame_temp_2.png" data-toggle="lightbox" data-title="temperature" data-gallery="multiimages" data-parent=".liftedflame_temp"><img src="img/liftedflame_temp_2.png" class="img-thumbnail"></a></div>
+          <div class="col-md-5"><a href="img/liftedflame_temp_2_gi.png" data-toggle="lightbox" data-title="temperature(GI)" data-gallery="multiimages" data-parent=".liftedflame_temp"><img src="img/liftedflame_temp_2_gi.png" class="img-thumbnail"></a></div>
+        </div>
+
+        <h1 class="page-header">engine</h1>
         <video id="video_1" class="video-js vjs-default-skin"
           controls preload="auto" width="800" height="600"
           poster="video/engine_gi_3L.jpg"
@@ -78,6 +111,22 @@
           <source src="video/engine_gi_3L.mp4" type='video/mp4' />
           <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
         </video>
+
+        <p>
+          <p>No GI</p>
+          <div class="row engine">
+            <div class="col-md-8"><a href="video/engine_no_gi.png" data-toggle="lightbox" data-title="velocity" data-gallery="multiimages" data-parent=".engine"><img src="video/engine_no_gi.png" class="img-thumbnail"></a></div>
+          </div>
+
+          <p>GI</p>
+          <video id="video_2" class="video-js vjs-default-skin"
+            controls preload="auto" width="800" height="600"
+            poster="video/engine_gi_2.png"
+            data-setup='{"example_option":true}'>
+            <source src="video/engine_gi_2.mp4" type='video/mp4' />
+            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+          </video>
+        </p>
         
         <!--<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document. aaa bbb ccc ddd ee dfgsdg gregre grfgre rfgreg ergrfg erger greg d</p>-->
       </div>
@@ -88,5 +137,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/ekko-lightbox.min.js"></script>
+    <script type="text/javascript">
+      $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+      });
+    </script>
   </body>
 </html>
