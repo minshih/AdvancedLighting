@@ -50,6 +50,20 @@
 
       <div class="starter-template">
 
+        <h1 class="page-header">Opcital models</h1>
+        <p>Standard emission-absorption (1), gradient-based Blinn-Phong (2), our method (3), our method with gradient-based Blinn-Phong (4), our method with 2 light sources (5)</p>
+        <div class="row optical_models">
+          <div class="col-md-3"><a href="img/optical_emission_absorption.png" data-toggle="lightbox" data-title="Standard emission-absorption model" data-gallery="multiimages" data-parent=".optical_models"><img src="img/optical_emission_absorption.png" class="img-thumbnail"/></a></div>
+          <div class="col-md-3"><a href="img/optical_blinn_phong.png" data-toggle="lightbox" data-title="Gradient-based Blinn-Phong shading" data-gallery="multiimages" data-parent=".optical_models"><img src="img/optical_blinn_phong.png" class="img-thumbnail"/></a></div>
+          <div class="col-md-3"><a href="img/optical_gi.png" data-toggle="lightbox" data-title="Advanced lighting" data-gallery="multiimages" data-parent=".optical_models"><img src="img/optical_gi.png" class="img-thumbnail"/></a></div>
+          <div class="col-md-3"><a href="img/optical_gi_blinn_phong.png" data-toggle="lightbox" data-title="Advanced lighting with gradient-based Blinn-Phong shading" data-gallery="multiimages" data-parent=".optical_models"><img src="img/optical_gi_blinn_phong.png" class="img-thumbnail"/></a></div>
+          <div class="col-md-3"><a href="img/optical_gi_2l.png" data-toggle="lightbox" data-title="Advanced lighting with gradient-based Blinn-Phong shading (with back light)" data-gallery="multiimages" data-parent=".optical_models"><img src="img/optical_gi_2l.png" class="img-thumbnail"/></a></div>
+        </div>
+        <br/>
+        <p>
+          Volume rendering of the LiftedFlame dataset with different optical models. (1) The standard emission-absorption model provides very few information about the surface shape and depth cue. (2) With the Lambertian diffuse and specular reflectance, the gradient-based Blinn-Phong shading better conveys the surface shape but is still insufficient to resolve curtain ambiguities such as the local shape at the center region of the image. (3) With our advanced lighting method, one can clear see the concave shape at the center region. (4) Combined with the gradient-based surface shading, the image gains even more details about the surface shape. (5) With a red back light, the we can get the sense of material thickness while it is lost in image (2)-(4).
+        </p>
+
         <h1 class="page-header">Comparison to ray tracing</h1>
         <p>Local lighting (left), our method (middle), ray tracing (1 shadow ray) (right). Illumination is performed with a single directional light source.</p>
         <div class="row comp_rt">
