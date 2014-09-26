@@ -50,6 +50,78 @@
 
       <div class="starter-template">
 
+        <h1 class="page-header">Tables and plots</h1>
+        <p>Performance measurements for the datasets of this paper. The light volume calculation times are measured using a single directional light source. L0 grid is a regular grid of 128\times 128\times 128 voxels, and L1 grid is the original tetrahedral grid.</p>
+        <table class="table table-striped">
+          <thead>
+            <tr><th>Dataset</th><th>#Vertices</th><th>#Tetrahera</th><th>L0 Propagation</th><th>L0 Scattering</th><th>L1 Propagation</th><th>L1 Scattering</th><th>Total</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Aircraft1</td><td>103 K</td><td>567 K</td><td>73 ms</td><td>12 ms</td><td>6 ms</td><td>20 ms</td><td>111 ms</td></tr>
+            <tr><td>Aircraft2</td><td>165 K</td><td>935 K</td><td>58 ms</td><td>11 ms</td><td>6 ms</td><td>24 ms</td><td>99 ms</td></tr>
+            <tr><td>Aircraft3</td><td>804 K</td><td>4.6 M</td><td>53 ms</td><td>10 ms</td><td>25 ms</td><td>136 ms</td><td>224 ms</td></tr>
+            <tr><td>Flame</td><td>538 K</td><td>3.2 M</td><td>57 ms</td><td>10 ms</td><td>15 ms</td><td>88 ms</td><td>170 ms</td></tr>
+            <tr><td>Engine</td><td>1.2 M</td><td>6.0 M</td><td>64 ms</td><td>11 ms</td><td>28 ms</td><td>152 ms</td><td>255 ms</td></tr>
+            <tr><td>Train</td><td>1.0 M</td><td>6.1 M</td><td>60 ms</td><td>11 ms</td><td>19 ms</td><td>123 ms</td><td>213 ms</td></tr>
+            <tr><td>Car</td><td>4.2 M</td><td>24.7 M</td><td>56 ms</td><td>11 ms</td><td>126 ms</td><td>561 ms</td><td>754 ms</td></tr>
+          </tbody>
+        </table>
+        <p></p>
+
+        <h1 class="page-header">Performance test</h1>
+        <p><b>L0</b>: Cartesian regular base grid, <b>L1</b>: original tetrahedral grid</p>
+        <p>L0 resolution: 128x128x128, L1 propagation steps: >=16, 1 directional light source. Note that L0 scattering is not necessary for unstructured data rendering. Image size: 1024x1024.</p>
+        <table class="table table-striped">
+          <thead>
+            <tr><th>Dataset</th><th>#Tetra(L1)</th><th>L0 absorb</th><th>L0 scatter</th><th>L1 absorb</th><th>L1 scatter</th><th>Total(ms)</th><th>Render</th><th>RT</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>parikh(Aircraft1)</td><td>567862</td><td>73</td><td>12</td><td>6</td><td>20</td><td>111</td><td>358</td><td>11579</td></tr>
+            <tr><td>lwt(Aircraft3)</td><td>4607888</td><td>53</td><td>10</td><td>25</td><td>136</td><td>224</td><td>491</td><td>18735</td></tr>
+            <tr><td>ICE(Train)</td><td>6177293</td><td>60</td><td>11</td><td>19</td><td>123</td><td>213</td><td>322</td><td>12764</td></tr>
+            <tr><td>BMW(Car)</td><td>24709697</td><td>56</td><td>11</td><td>126</td><td>561</td><td>754</td><td>415</td><td>12653</td></tr>
+            <tr><td>engine</td><td>6072445</td><td>64</td><td>11</td><td>28</td><td>152</td><td>255</td><td>1276</td><td>52153</td></tr>
+            <tr><td>Drop(Aircraft2)</td><td>935410</td><td>58</td><td>11</td><td>6</td><td>24</td><td>99</td><td>340</td><td>11874</td></tr>
+            <tr><td>LiftedFlame</td><td>3216447</td><td>57</td><td>10</td><td>15</td><td>88</td><td>170</td><td>294</td><td>18846</td></tr>
+          </tbody>
+        </table>
+
+        <p>L1 propagation steps: >=16, 1 directional light source.</p>
+        <table class="table table-striped">
+          <thead>
+            <tr><th>Dataset</th><th>#Tetra(L1)</th><th>L0 size</th><th>L0 absorb</th><th>L0 scatter</th><th>L1 absorb</th><th>L1 scatter</th><th>Total(ms)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Vortex</td><td>6000000</td><td>32^3</td><td>22</td><td>1</td><td>15</td><td>83</td><td>121</td></tr>
+            <tr><td></td><td></td><td>64^3</td><td>38</td><td>3</td><td>14</td><td>83</td><td>138</td></tr>
+            <tr><td></td><td></td><td>128^3</td><td>55</td><td>10</td><td>15</td><td>83</td><td>163</td></tr>
+            <tr><td></td><td></td><td>256^3</td><td>88</td><td>100</td><td>20</td><td>83</td><td>289</td></tr>
+            <tr><td></td><td></td><td>384^3</td><td>143</td><td>334</td><td>32</td><td>83</td><td>592</td></tr>
+          </tbody>
+        </table>
+
+        <p>L0 size: 128x128x128, L1 propagation steps: >=16, 1 directional light source.</p>
+        <table class="table table-striped">
+          <thead>
+            <tr><th>Dataset</th><th>#Vertex</th><th>#Tetra(L1)</th><th>L0 absorb</th><th>L0 scatter</th><th>L1 absorb</th><th>L1 scatter</th><th>Total(ms)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Vortex</td><td>85184</td><td>477042</td><td>56</td><td>13</td><td>5</td><td>9</td><td>84</td></tr>
+            <tr><td></td><td>175616</td><td>998250</td><td>56</td><td>12</td><td>5</td><td>18</td><td>91</td></tr>
+            <tr><td></td><td>343000</td><td>1971054</td><td>57</td><td>11</td><td>6</td><td>29</td><td>103</td></tr>
+            <tr><td></td><td>681472</td><td>3951018</td><td>54</td><td>11</td><td>10</td><td>53</td><td>128</td></tr>
+            <tr><td></td><td>1030301</td><td>6000000</td><td>55</td><td>10</td><td>15</td><td>83</td><td>163</td></tr>
+            <tr><td></td><td>1685159</td><td>9858192</td><td>53</td><td>11</td><td>23</td><td>142</td><td>229</td></tr>
+            <tr><td></td><td>2352637</td><td>13799808</td><td>54</td><td>10</td><td>31</td><td>208</td><td>303</td></tr>
+            <tr><td></td><td>3048625</td><td>17915904</td><td>53</td><td>10</td><td>41</td><td>260</td><td>364</td></tr>
+            <tr><td></td><td>3723875</td><td>21913584</td><td>56</td><td>11</td><td>47</td><td>320</td><td>434</td></tr>
+            <tr><td></td><td>4410944</td><td>25984482</td><td>56</td><td>10</td><td>54</td><td>380</td><td>500</td></tr>
+            <tr><td></td><td>5088448</td><td>30001266</td><td>54</td><td>12</td><td>62</td><td>436</td><td>564</td></tr>
+          </tbody>
+        </table>
+
+        <!--<p>In our experiments, implementation and GPU architecture issues seem dominate the computation time. For example, the performance of using 3D Cuda grid is over ten times faster than invoking the kernel slice-by-slice. For L0 absorption, the kernel is still invoked slice-by-slice because the computation greatly decreases if the calculation is performed in a light propagation order due the characteristic of upwind scheme. Indeed, the order of the computation overhead of L0 absorption is about the same as that of L0 scattering (128^3 * 16).</p>-->
+
         <h1 class="page-header">Related work</h1>
         <p>The volume illumination involves solving the radiative transfer equation~\cite{Chandrasekhar:1960}, which formalizes the evolution of light transport with participating media, including light absorption, scattering and emission effects. Max~\cite{Max:1995} presented an overview on the optical models used in direct volume rendering (DVR). Kajiya and von Herzen~\cite{Kajiya:1984} presented a model for rendering volume densities which included multiple scattering computation. The scattering equation is solvable analytically only in some simple configurations. Several methods have been proposed to numerically solve the radiative transfer equation by using either ray tracing~\cite{Lafortune:1996}~\cite{Levoy:1990} or radiosity~\cite{Rushmeier:1987}. These methods are capable of rendering various illumination effects with arbitrary phase functions and heterogeneous media. However, the computational cost is tremendous, and the speed is far from the requirement of interaction.</p>
 
