@@ -69,6 +69,7 @@
             <tr><td>engine</td><td>1240242</td><td>6072445</td><td>0</td><td>0</td><td>6072445</td><td>134 MB (single step)</td></tr>
             <tr><td>Drop (bomb)</td><td>165985</td><td>935410</td><td>0</td><td>0</td><td>935410</td><td>71.1 MB</td></tr>
             <tr><td>LiftedFlame</td><td>538432</td><td>3216447</td><td>0</td><td>0</td><td>3216447</td><td>181 MB</td></tr>
+            <tr><td>BunsenFlame</td><td>0</td><td>1</td><td>0</td><td>0</td><td>2</td><td>0 MB (single step)</td></tr>
           </tbody>
         </table>
 
@@ -112,8 +113,38 @@
             <div class="col-md-5"><a href="img/liftedflame_h2o_1_gi.png" data-toggle="lightbox" data-title="Y_H2O(GI)" data-gallery="multiimages" data-parent=".liftedflame_h2o"><img src="img/liftedflame_h2o_1_gi.png" class="img-thumbnail"></a></div>
           </div>
         </p>
+        <p>temperature (GI)</p>
+        <video id="video_liftedflame" class="video-js vjs-default-skin"
+          controls preload="auto" width="800" height="600"
+          poster="video/liftedflame_temp.png"
+          data-setup='{"example_option":true}'>
+          <source src="video/liftedflame_temp.mp4" type='video/mp4' />
+          <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+
+        <h1 class="page-header">BunsenFlame</h1>
+        <p>temperature (GI)</p>
+        <video id="video_bunsenflame" class="video-js vjs-default-skin"
+          controls preload="auto" width="800" height="600"
+          poster="video/bunsenflame_temp.png"
+          data-setup='{"example_option":true}'>
+          <source src="video/bunsenflame_temp.mp4" type='video/mp4' />
+          <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
 
         <h1 class="page-header">engine</h1>
+
+        <p>Emission-abosorption / Phong shading / Adv. lighting (1 light) / Adv. lighting (3 lights)
+          <div class="row engine">
+            <div class="col-md-6"><a href="img/engine_em-ab.png" data-toggle="lightbox" data-title="Emission-absoption" data-gallery="multiimages" data-parent=".engine"><img src="img/engine_em-ab.png" class="img-thumbnail"></a></div>
+            <div class="col-md-6"><a href="img/engine_ph.png" data-toggle="lightbox" data-title="Gradient-based Phong shading" data-gallery="multiimages" data-parent=".engine"><img src="img/engine_ph.png" class="img-thumbnail"></a></div>
+            <div class="col-md-6"><a href="img/engine_1l.png" data-toggle="lightbox" data-title="Advanced lighting, 1 light source" data-gallery="multiimages" data-parent=".engine"><img src="img/engine_1l.png" class="img-thumbnail"></a></div>
+            <div class="col-md-6"><a href="img/engine_3l.png" data-toggle="lightbox" data-title="Advanced lighting, 3 light sources" data-gallery="multiimages" data-parent=".engine"><img src="img/engine_3l.png" class="img-thumbnail"></a></div>
+          </div>
+        </p>
+
+        <br/>
+
         <video id="video_1" class="video-js vjs-default-skin"
           controls preload="auto" width="800" height="600"
           poster="video/engine_gi_3L.jpg"
